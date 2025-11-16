@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- ---------- THEME PRELOAD (place as first thing inside <head>) ---------- -->
+<script>
+  // Immediately apply theme before paint — prevents flicker
+  (function(){
+    const saved = localStorage.getItem('site-mode') || 'light'; // default to light
+    if(saved === 'light') document.documentElement.classList.add('light-mode');
+    // make page visible immediately after theme applied
+    document.documentElement.style.visibility = 'visible';
+  })();
+</script>
+<style>html{visibility:hidden}</style>
+<!-- ------------------------------------------------------------------------ -->
+
+  <style>
+  html { visibility: hidden; }
+</style>
+<script>
+  (function(){
+    const saved = localStorage.getItem('site-mode') || 'light';
+    if(saved==='light') document.documentElement.classList.add('light-mode');
+    document.documentElement.style.visibility='visible';
+  })();
+</script>
+
+  <!-- favicon -->
+  <link rel="icon" href="logo.png" />
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Experience — Eman Shalabi</title>
+  <link rel="icon" href="images/favicon-placeholder.png" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/experience.css" />
+  <script src="https://kit.fontawesome.com/d9a77b60d1.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/footer.css">
+
+<style>
+  .experience-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--border);
+  }
+  
+  .exp-details {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+  }
+  
+  .exp-details li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: var(--text);
+    opacity: 0.9;
+    font-size: 0.95rem;
+    position: relative;
+  }
+  
+  .exp-details li::before {
+    content: "•";
+    color: var(--accent);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+  }
+  
+  .exp-card small {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  .section-title {
+    margin-bottom: 2rem !important;
+  }
+</style>
+
+</head>
+<body>
+    <canvas id="particles" style="position:fixed;inset:0;z-index:-1;pointer-events:none;"></canvas>
+
+  <!-- Floating circles background canvas -->
+<canvas id="bgCircles" aria-hidden="true" style="position:fixed;inset:0;z-index:-2;pointer-events:none;"></canvas>
+
+  <!-- header -->
+  <header class="site-header">
+    <div class="header-left">
+      <img src="logo.png" alt="Logo" class="logo-img">
+      <div class="site-title"><span class="name">Eman Shalabi</span><span class="title">Registered Practical Nurse (RPN)</span></div>
+    </div>
+
+    <!-- Regular navigation (visible on desktop) -->
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="education.html">Education</a>
+      <a href="experience.html" class="active">Experience</a>
+      <a href="skills.html">Skills</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+      <button id="modeToggle" class="mode-btn"><i class="fa-solid fa-circle-half-stroke"></i></button>
+    </nav>
+
+    <!-- Mobile toggle button -->
+    <button class="nav-toggle" id="navToggle">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Dropdown navigation (visible on mobile) -->
+    <div class="dropdown-nav" id="dropdownNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="education.html">Education</a>
+      <a href="experience.html" class="active">Experience</a>
+      <a href="skills.html">Skills</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+      <button id="dropdownModeToggle" class="mode-btn">
+        <i class="fa-solid fa-circle-half-stroke"></i> Toggle Theme
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" data-aos="fade-up">
+      <h1 class="page-title">Professional Experience</h1>
+     <p class="lead">My diverse clinical experiences across acute care, complex medical settings, and community health have developed my comprehensive nursing competencies and patient advocacy skills. Each role has strengthened my ability to deliver exceptional care in dynamic healthcare environments.</p>
+      <!-- Healthcare Experience Section -->
+      <!-- <div class="experience-section"> -->
+        <h2 class="section-title" >Healthcare Experience</h2>
+        <div class="exp-grid">
+          
+          <div class="exp-card" data-aos="fade-up" data-aos-delay="150">
+            <h3>Postmortem Nurse – Funeral Home</h3>
+            
+            <small>ISNA Canada Funeral Home <br> Oct 2025 – Current</small>
+            <ul class="exp-details">
+              <li>Perform postmortem wound care and manage removal of medical devices including IVs, catheters, and tubes</li>
+              <li>Prepare deceased for viewing and ensure respectful transfer to cemetery facilities</li>
+              <li>Provide compassionate support and guidance to families during end-of-life transitions</li>
+              <li>Maintain strict adherence to infection control protocols and dignity standards</li>
+            </ul>
+          </div>
+
+          <div class="exp-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Student Nurse – Emergency Department</h3>
+            <small>Joseph Brant Hospital <br> May 2025 – Aug 2025</small>
+            <ul class="exp-details">
+              <li>Provided immediate care for acute injuries and medical emergencies across urgent care, critical care, and admission units</li>
+              <li>Conducted comprehensive primary assessments and obtained diagnostic ECGs</li>
+              <li>Initiated and maintained IV therapy, NG tubes, and continuous bladder irrigation systems</li>
+              <li>Ensured accurate, real-time documentation using Meditech electronic health records</li>
+            </ul>
+          </div>
+
+          <div class="exp-card" data-aos="fade-up" data-aos-delay="250">
+            <h3>Student Nurse – Surgical Floor</h3>
+            <small>Credit Valley Hospital (THP) <br> Jan 2025 – Apr 2025</small>
+            <ul class="exp-details">
+              <li>Managed comprehensive post-operative and acute care for surgical patients</li>
+              <li>Performed advanced wound care, tracheostomy management, and catheter maintenance</li>
+              <li>Provided paracentesis care and monitored post-procedure recovery</li>
+              <li>Developed and delivered patient/family education on discharge planning and recovery protocols</li>
+              <li>Utilized Epic EMR for real-time documentation and collaborative care planning</li>
+            </ul>
+          </div>
+
+          <div class="exp-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>Student Nurse – Complex Care</h3>
+            <small>St. Joseph's Hospital <br> Sep 2024 – Dec 2024</small>
+            <ul class="exp-details">
+              <li>Administered oxygen therapy and managed respiratory support equipment</li>
+              <li>Provided enteral feeding care and comprehensive ostomy management</li>
+              <li>Delivered specialized care for oncology and dementia patients with language barriers</li>
+              <li>Implemented therapeutic communication strategies for diverse patient populations</li>
+              <li>Maintained precise clinical documentation using Dovetale charting systems</li>
+            </ul>
+          </div>
+
+          <div class="exp-card" data-aos="fade-up" data-aos-delay="350">
+            <h3>Personal Support Worker</h3>
+            <small>Spectrum Healthcare <br> Jul 2024 – Nov 2024</small>
+            <ul class="exp-details">
+              <li>Delivered compassionate client-centered care in home and community settings</li>
+              <li>Assisted with activities of daily living including bathing, dressing, and grooming</li>
+              <li>Provided mobility support and safe transfer techniques</li>
+              <li>Conducted ongoing client monitoring and reported changes in condition</li>
+            </ul>
+          </div>
+
+          <div class="exp-card" data-aos="fade-up" data-aos-delay="400">
+            <h3>Personal Support Worker</h3>
+            <small>ParaMed Inc. <br> Feb 2023 – Mar 2024</small>
+            <ul class="exp-details">
+              <li>Provided comprehensive personal care in long-term care and community environments</li>
+              <li>Supported clients with daily living activities and nutritional needs</li>
+              <li>Implemented safe ambulation techniques and fall prevention strategies</li>
+              <li>Collaborated with interdisciplinary healthcare teams for optimal patient outcomes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Experience Section -->
+      <div class="experience-section" style="margin-top: 4rem;">
+        <h2 class="section-title">Additional Experience</h2>
+        <div class="exp-grid">
+          
+          <div class="exp-card" data-aos="fade-up" data-aos-delay="150">
+            <h3>Graphic Designer Volunteer</h3>
+            <small>Mohawk Students' Association <br> May 2024 – Sep 2025</small>
+            <ul class="exp-details">
+              <li>Designed health-awareness visuals and promotional materials for campus-wide campaigns</li>
+              <li>Created engaging digital content to promote student wellness initiatives</li>
+              <li>Collaborated with health services to develop educational materials</li>
+              <li>Managed multiple design projects with tight deadlines</li>
+            </ul>
+          </div>
+          
+          <div class="exp-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>IT Support Volunteer (Remote)</h3>
+            <small>Almasarawy Non-Profit <br> May 2023 – Current</small>
+            <ul class="exp-details">
+              <li>Provided technical support for EHR software implementation and troubleshooting</li>
+              <li>Developed and delivered cybersecurity training for healthcare staff</li>
+              <li>Assisted with digital transformation initiatives for healthcare documentation</li>
+              <li>Supported remote team collaboration and virtual training sessions</li>
+            </ul>
+          </div>
+          
+          <div class="exp-card" data-aos="fade-up" data-aos-delay="250">
+            <h3>Business Owner – Lona Store</h3>
+            <small>Mississauga & Plano, TX <br> 2018 – 2021</small>
+            <ul class="exp-details">
+              <li>Directed comprehensive business operations across multiple locations</li>
+              <li>Developed and implemented client service protocols and satisfaction metrics</li>
+              <li>Created and managed digital marketing strategies and social media campaigns</li>
+              <li>Oversaw inventory management, financial planning, and staff training</li>
+            </ul>
+          </div>
+
+          <div class="exp-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>Elementary Teacher – MDQ Academy</h3>
+            <small>Long Island, New York <br> 2015 – 2016</small>
+            <ul class="exp-details">
+              <li>Developed and implemented engaging curriculum for elementary students</li>
+              <li>Created differentiated learning materials to accommodate diverse learning styles</li>
+              <li>Fostered inclusive classroom environment promoting student growth</li>
+              <li>Collaborated with parents and staff to support student development</li>
+            </ul>
+          </div>
+
+          <div class="exp-card" data-aos="fade-up" data-aos-delay="350">
+            <h3>School Administrator & Teacher (Part-Time)</h3>
+            <small>Al-Andalus International School, Cairo, Egypt <br> 2012 – 2015</small>
+            <ul class="exp-details">
+              <li>Managed school operations including scheduling and resource allocation</li>
+              <li>Oversaw student records management and academic performance tracking</li>
+              <li>Developed and implemented school policies and procedures</li>
+              <li>Coordinated with teaching staff to ensure educational standards</li>
+              <li>Facilitated professional development and staff training sessions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>© 2025 Eman Shalabi | All Rights Reserved</p>
+    <div class="footer-icons">
+      <a href="mailto:Eman.shalabi.ca@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      <a href="tel:4379733667"><i class="fa-solid fa-phone"></i></a>
+      <a href="https://www.linkedin.com/in/eshalabi" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script> 
+    AOS.init({ 
+      duration: 800, 
+      offset: 120, 
+      once: true,
+      startEvent: 'DOMContentLoaded'
+    }); 
+  </script>
+
+<button id="quickMsgBtn" class="chat-btn"><i class="fa-solid fa-message"></i></button>
+
+<div id="quickMsgModal" class="chat-modal">
+  <div class="chat-header">
+    <span>Quick Message</span>
+    <button id="qmClose">&times;</button>
+  </div>
+  <form id="quickMsgForm">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Type your message..." required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+</body>
+</html>

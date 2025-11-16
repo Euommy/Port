@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- ---------- THEME PRELOAD (place as first thing inside <head>) ---------- -->
+<script>
+  // Immediately apply theme before paint — prevents flicker
+  (function(){
+    const saved = localStorage.getItem('site-mode') || 'light'; // default to light
+    if(saved === 'light') document.documentElement.classList.add('light-mode');
+    // make page visible immediately after theme applied
+    document.documentElement.style.visibility = 'visible';
+  })();
+</script>
+<style>html{visibility:hidden}</style>
+<!-- ------------------------------------------------------------------------ -->
+
+  <style>
+  html { visibility: hidden; }
+</style>
+<script>
+  (function(){
+    const saved = localStorage.getItem('site-mode') || 'light';
+    if(saved==='light') document.documentElement.classList.add('light-mode');
+    document.documentElement.style.visibility='visible';
+  })();
+</script>
+
+  <!-- favicon -->
+  <link rel="icon" href="logo.png" />
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Certifications — Eman Shalabi</title>
+  <link rel="icon" href="images/favicon-placeholder.png" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/certifications.css" />
+  <script src="https://kit.fontawesome.com/d9a77b60d1.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <canvas id="particles" style="position:fixed;inset:0;z-index:-1;pointer-events:none;"></canvas>
+
+  <!-- Floating circles background canvas -->
+<canvas id="bgCircles" aria-hidden="true" style="position:fixed;inset:0;z-index:-2;pointer-events:none;"></canvas>
+
+    <!-- header (shared) -->
+  <header class="site-header">
+    <div class="header-left">
+      <img src="logo.png" alt="Logo" class="logo-img">
+      <div class="site-title"><span class="name">Eman Shalabi</span><span class="title">Registered Practical Nurse (RPN)</span></div>
+    </div>
+
+    <!-- Regular navigation (visible on desktop) -->
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="education.html">Education</a>  
+      <a href="experience.html">Experience</a>
+      <a href="skills.html">Skills</a>
+      <a href="certifications.html" class="active">Certifications</a>
+      <a href="contact.html">Contact</a>
+      <button id="modeToggle" class="mode-btn"><i class="fa-solid fa-circle-half-stroke"></i></button>
+    </nav>
+
+    <!-- Mobile toggle button -->
+    <button class="nav-toggle" id="navToggle">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Dropdown navigation (visible on mobile) -->
+    <div class="dropdown-nav" id="dropdownNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="education.html">Education</a>
+      <a href="experience.html">Experience</a>
+      <a href="skills.html">Skills</a>
+      <a href="certifications.html" class="active">Certifications</a>
+      <a href="contact.html">Contact</a>
+      <button id="dropdownModeToggle" class="mode-btn">
+        <i class="fa-solid fa-circle-half-stroke"></i> Toggle Theme
+      </button>
+    </div>
+  </header>
+  <main>
+
+    <section class="section" data-aos="fade-up">
+  <h1 class="page-title">Certifications & Workshops</h1>
+  <p class="lead">My commitment to professional development is demonstrated through current certifications that ensure I provide safe, evidence-based care. These credentials reflect my dedication to maintaining clinical excellence and staying current with evolving healthcare standards.</p>
+</section>
+<section class="section" data-aos="fade-up">
+  <h2 class="section-title">Certifications & Training</h2>
+
+  <div class="cert-grid">
+
+    <!-- 1 -->
+    <div class="cert-card">
+      <div class="cert-inner">
+        <div class="cert-front">
+          <h3>CPR Level C </h3>
+          <p>Certified adult, child, and infant life-saving techniques and AED use.</p>
+        </div>
+        <div class="cert-back">
+          <img src="CPR.png" alt="BLS Certificate">
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- 5 -->
+    <div class="cert-card">
+      <div class="cert-inner">
+        <div class="cert-front">
+          <h3>Basic Life Support</h3>
+          <p>Advanced hygiene protocols & outbreak prevention.</p>
+        </div>
+        <div class="cert-back">
+          <img src="BLS.png" alt="IPAC Certificate">
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="cert-card">
+      <div class="cert-inner">
+        <div class="cert-front">
+          <h3>Medical Psychiatry Collaborative Care</h3>
+          <p>Integrated care for patients with mental & physical health conditions.</p>
+        </div>
+        <div class="cert-back">
+          <img src="PHYSC.png" alt="Medical Psychiatry Certificate">
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="cert-card">
+      <div class="cert-inner">
+        <div class="cert-front">
+          <h3>Ontario CLRI Interprofessional Innovation & Aging Intern</h3>
+          <p>Collaborative geriatric care innovation training.</p>
+        </div>
+        <div class="cert-back">
+          <img src="CLRI.jpg" alt="CLRI Certificate">
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="cert-card">
+      <div class="cert-inner">
+        <div class="cert-front">
+          <h3>Gentle Persuasive Approach (GPA)</h3>
+          <p>Dementia-responsive behavioral management strategies.</p>
+        </div>
+        <div class="cert-back">
+          <img src="GPA.png" alt="GPA Certificate">
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 6 -->
+    <div class="cert-card">
+      <div class="cert-inner">
+        <div class="cert-front">
+          <h3>Preventing Acute Deterioration Course.</h3>
+          <p>Preventing Acute Deterioration Course.</p>
+        </div>
+        <div class="cert-back">
+          <img src="DETERIORATION.png" alt="WHMIS Certificate">
+        </div>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="cert-card">
+      <div class="cert-inner">
+        <div class="cert-front">
+          <h3>Team Essentials for Engaging Families in Distress Course. </h3>
+          <p>Team reflection & interprofessional collaboration.</p>
+        </div>
+        <div class="cert-back">
+          <img src="ENGAGING FAMILIES.jpg" alt="Reflective Practice Certificate">
+        </div>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="cert-card">
+      <div class="cert-inner">
+        <div class="cert-front">
+          <h3>Addiction Treatment: Clinical Skills for Healthcare Providers.</h3>
+          <p>Healthcare innovation & patient-safety project.</p>
+        </div>
+        <div class="cert-back">
+          <img src="Screenshot 2025-11-14 201802.png" alt="Innovation Think Tank Certificate">
+        </div>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="cert-card">
+      <div class="cert-inner">
+        <div class="cert-front">
+          <h3>Sleep Disorders in Medically Complex Patients</h3>
+          <p>Assessment & evidence-based intervention training.</p>
+        </div>
+        <div class="cert-back">
+          <img src="Screenshot 2025-11-14 203141.png" alt="Sleep Disorders Certificate">
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="cert-card">
+      <div class="cert-inner">
+        <div class="cert-front">
+          <h3>Healthcare Management and Finance</h3>
+          <p>Ongoing development in integrated care & geriatrics.</p>
+        </div>
+        <div class="cert-back">
+          <img src="Healthcare Management and Finance Specialization (University of Michigan).png" alt="Continuing Education Certificate">
+        </div>
+      </div>
+    </div>
+
+        <!-- 11 -->
+    <div class="cert-card">
+      <div class="cert-inner">
+        <div class="cert-front">
+          <h3>Healthcare IT Support Specialization.</h3>
+          <p>Ongoing development in integrated care & geriatrics.</p>
+        </div>
+        <div class="cert-back">
+          <img src="Healthcare IT Support Specialization (Johns Hopkins University).png" alt="Continuing Education Certificate">
+        </div>
+      </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="cert-card">
+      <div class="cert-inner">
+        <div class="cert-front">
+          <h3>Infection Prevention in Nursing Homes Cert.</h3>
+          <p>Ongoing development in integrated care & geriatrics.</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  </main>
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>© 2025 Eman Shalabi | All Rights Reserved</p>
+    <div class="footer-icons">
+      <a href="mailto:Eman.shalabi.ca@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      <a href="tel:4379733667"><i class="fa-solid fa-phone"></i></a>
+      <a href="https://www.linkedin.com/in/eshalabi" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script> AOS.init({ duration:900, offset:120, once:true }); </script>
+<div id="quickMsgContainer"></div>
+<button id="quickMsgBtn" class="chat-btn"><i class="fa-solid fa-message"></i></button>
+
+<div id="quickMsgModal" class="chat-modal">
+  <div class="chat-header">
+    <span>Quick Message</span>
+    <button id="qmClose">&times;</button>
+  </div>
+  <form id="quickMsgForm">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Type your message..." required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+</body>
+</html>

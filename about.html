@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<!-- THEME PRELOAD (kept clean + only once) -->
+<script>
+  (function () {
+    const saved = localStorage.getItem("site-mode") || "light";
+    if (saved === "light") document.documentElement.classList.add("light-mode");
+    document.documentElement.style.visibility = "visible";
+  })();
+</script>
+<style>html{visibility:hidden;}</style>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<title>About — Eman Shalabi</title>
+
+<link rel="icon" href="images/favicon-placeholder.png" />
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/about.css">
+<link rel="stylesheet" href="css/footer.css">
+<script src="https://kit.fontawesome.com/d9a77b60d1.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<!-- Floating circles background -->
+<canvas id="bgCircles"></canvas>
+
+<header class="site-header">
+  <div class="header-left">
+    <img src="logo.png" alt="Logo" class="logo-img" />
+    <div class="site-title">
+      <span class="name">Eman Shalabi</span>
+      <span class="title">Registered Practical Nurse (RPN)</span>
+    </div>
+  </div>
+
+  <!-- Hamburger (WORKING ONE) -->
+  <button id="navToggle" class="nav-toggle">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <!-- Desktop Nav -->
+  <nav class="main-nav" id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="education.html">Education</a>
+    <a href="experience.html">Experience</a>
+    <a href="skills.html">Skills</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="contact.html">Contact</a>
+    <button id="modeToggle" class="mode-btn"><i class="fa-solid fa-circle-half-stroke"></i></button>
+  </nav>
+
+  <!-- Mobile Dropdown Menu (ONLY WORKING VERSION) -->
+  <div class="dropdown-nav" id="dropdownNav">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="education.html">Education</a>
+    <a href="experience.html">Experience</a>
+    <a href="skills.html">Skills</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="contact.html">Contact</a>
+
+    <button id="dropdownModeToggle" class="mode-btn">
+      <i class="fa-solid fa-circle-half-stroke"></i> Toggle Theme
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="section" id="aboutHero" data-aos="fade-up">
+    <h1 class="page-title">About</h1>
+    <p class="lead">
+      Compassionate RPN with extensive experience supporting geriatric and vulnerable populations. I integrate clinical practice, health informatics, and strong interpersonal skills to deliver safe, dignified, patient-centered care.
+    </p>
+  </section>
+
+  <!-- TWO COLUMN LAYOUT -->
+  <section class="section two-column" data-aos="fade-up">
+
+    <div class="left">
+      <p class="lead">
+        My nursing journey began in my family’s charitable medical center in Egypt, where years of volunteer work taught me that true healing is rooted in empathy, dignity, and human connection.
+      </p>
+
+      <p>
+        Through diverse Canadian clinical rotations in acute care, surgery, and complex medical units, I have developed a calm, grounded, and patient-focused approach. Colleagues often describe me as supportive, composed under pressure, and always positive.
+      </p>
+
+      <p>
+        I believe in continuous learning—driven by a long-term goal of clinical excellence, leadership, and lifelong growth. I aim to learn something meaningful every day and use that knowledge to enhance patient outcomes.
+      </p>
+
+      <p class="quote"><em>
+        “The best way to find yourself is to lose yourself in the service of others.” — Mahatma Gandhi
+      </em></p>
+
+      <p>
+        My purpose in healthcare is simple: to help people feel safe, cared for, and seen—bringing comfort to families during their most vulnerable moments.
+      </p>
+    </div>
+
+    <div class="right">
+      <img src="mypic.jpg" alt="Eman Shalabi photo" class="about-photo" />
+      
+      <div class="box-stats">
+        <div><strong>15+</strong><span>Years volunteering with seniors & children</span></div>
+        <div><strong>Hospitals</strong><span>Joseph Brant · Credit Valley · St. Joseph’s</span></div>
+        <div><strong>Languages</strong><span>English · Arabic · French</span></div>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>© 2025 Eman Shalabi | All Rights Reserved</p>
+    <div class="footer-icons">
+      <a href="mailto:Eman.shalabi.ca@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      <a href="tel:4379733667"><i class="fa-solid fa-phone"></i></a>
+      <a href="https://www.linkedin.com/in/eshalabi" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/main.js"></script>
+<script>AOS.init({ duration: 900, offset: 120, once: true });</script>
+
+<!-- Quick Messaging (still enabled) -->
+<div id="quickMsgContainer"></div>
+<button id="quickMsgBtn" class="chat-btn"><i class="fa-solid fa-message"></i></button>
+
+<div id="quickMsgModal" class="chat-modal">
+  <div class="chat-header">
+    <span>Quick Message</span>
+    <button id="qmClose">&times;</button>
+  </div>
+  <form id="quickMsgForm">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Type your message..." required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- ---------- THEME PRELOAD (place as first thing inside <head>) ---------- -->
+<script>
+  // Immediately apply theme before paint — prevents flicker
+  (function(){
+    const saved = localStorage.getItem('site-mode') || 'light'; // default to light
+    if(saved === 'light') document.documentElement.classList.add('light-mode');
+    // make page visible immediately after theme applied
+    document.documentElement.style.visibility = 'visible';
+  })();
+</script>
+<style>html{visibility:hidden}</style>
+<!-- ------------------------------------------------------------------------ -->
+
+  <style>
+  html { visibility: hidden; }
+</style>
+<script>
+  (function(){
+    const saved = localStorage.getItem('site-mode') || 'light';
+    if(saved==='light') document.documentElement.classList.add('light-mode');
+    document.documentElement.style.visibility='visible';
+  })();
+</script>
+  <!-- favicon -->
+  <link rel="icon" href="logo.png" />
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Education — Eman Shalabi</title>
+  <link rel="icon" href="images/favicon-placeholder.png" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/education.css" />
+  <script src="https://kit.fontawesome.com/d9a77b60d1.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <canvas id="particles" style="position:fixed;inset:0;z-index:-1;pointer-events:none;"></canvas>
+<canvas id="bgCircles"></canvas>
+
+  <!-- Floating circles background canvas -->
+<canvas id="bgCircles" aria-hidden="true" style="position:fixed;inset:0;z-index:-2;pointer-events:none;"></canvas>
+
+    <!-- header (shared) -->
+  <header class="site-header">
+    <div class="header-left">
+      <img src="logo.png" alt="Logo" class="logo-img">
+      <div class="site-title"><span class="name">Eman Shalabi</span><span class="title">Registered Practical Nurse (RPN)</span></div>
+    </div>
+
+    <!-- Regular navigation (visible on desktop) -->
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="education.html" class="active">Education</a>
+      <a href="experience.html">Experience</a>
+      <a href="skills.html">Skills</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+      <button id="modeToggle" class="mode-btn"><i class="fa-solid fa-circle-half-stroke"></i></button>
+    </nav>
+
+    <!-- Mobile toggle button -->
+    <button class="nav-toggle" id="navToggle">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Dropdown navigation (visible on mobile) -->
+    <div class="dropdown-nav" id="dropdownNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="education.html" class="active">Education</a>
+      <a href="experience.html">Experience</a>
+      <a href="skills.html">Skills</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+      <button id="dropdownModeToggle" class="mode-btn">
+        <i class="fa-solid fa-circle-half-stroke"></i> Toggle Theme
+      </button>
+    </div>
+  </header>
+  <main class="page-content container-centered">
+    
+    <section class="section" data-aos="fade-up">
+  <h1 class="page-title">Education</h1>
+  
+    <p class="lead">My formal education integrates nursing, informatics, and technology — empowering me to deliver evidence-based care supported by data-driven systems.</p>
+</section>
+
+    <!-- <section class="section">
+     -->
+  <section class="section" data-aos="fade-up">
+      <div class="cards-grid">
+        <div class="card">
+          <h3>BScN Degree Completion</h3>
+          <p>Humber College, Toronto, ON <br> 2026 – 2028</p>
+          <p>Advanced coursework in clinical leadership, research, and complex patient care in acute and community settings.</p>
+        </div>
+        <div class="card">
+          <h3>Practical Nursing Diploma</h3>
+          <p>Mohawk College, Hamilton, ON <br> 2024 – 2025</p>
+          <p>Built strong foundations in clinical judgment, pharmacology, and evidence-informed nursing practice across acute, community, and long-term care environments.</p>
+        </div>
+        <div class="card">
+          <h3>Personal Support Worker (Honours)</h3>
+          <p>Mohawk College, Hamilton, ON <br> 2023 – 2024</p>
+          <p>Developed competency in bedside care, mobility assistance, dementia support, and end-of-life comfort care.</p>
+        </div>
+        <div class="card">
+          <h3>Health Informatics Technology Diploma</h3>
+          <p>Centennial College, Scarborough, ON <br> 2022 – 2024</p>
+          <p>Gained proficiency in EMR systems, health data management, cybersecurity, and digital workflows supporting safe patient care.</p>
+        </div>
+        <div class="card">
+          <h3>Computer Programming</h3>
+          <p>Algonquin College, Ottawa, ON <br> 2021</p>
+          <p>Learned foundational coding, database management, and digital literacy skills applicable to documentation accuracy and healthcare technology systems.</p>
+        </div>
+        <div class="card">
+          <h3>Bachelor of Commerce</h3>
+          <p>Ain Shams University, Cairo, Egypt <br> 2006 – 2010</p>
+          <p>Strengthened analytical, organizational, and leadership abilities relevant to interdisciplinary teamwork and evidence-based clinical decision-making.</p>
+        </div>
+      </div>
+      
+    </section>
+  </main>
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>© 2025 Eman Shalabi | All Rights Reserved</p>
+    <div class="footer-icons">
+      <a href="mailto:Eman.shalabi.ca@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      <a href="tel:4379733667"><i class="fa-solid fa-phone"></i></a>
+      <a href="https://www.linkedin.com/in/eshalabi" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script> AOS.init({ duration:900, offset:120, once:true }); </script>
+<button id="quickMsgBtn" class="chat-btn"><i class="fa-solid fa-message"></i></button>
+
+<div id="quickMsgModal" class="chat-modal">
+  <div class="chat-header">
+    <span>Quick Message</span>
+    <button id="qmClose">&times;</button>
+  </div>
+  <form id="quickMsgForm">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Type your message..." required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+</body>
+</html>

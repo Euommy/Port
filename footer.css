@@ -1,0 +1,17 @@
+.site-footer {
+  background: #0e1624;
+  border-top: 3px solid var(--accent);
+  color: var(--text-dark);
+  text-align: center;
+  padding: 30px 0;
+}
+.footer-icons a {
+  margin: 0 8px;
+  font-size: 1.3rem;
+  color: var(--accent);
+  transition: all 0.3s ease;
+}
+.footer-icons a:hover {
+  color: #2563eb;
+  transform: translateY(-3px);
+}
